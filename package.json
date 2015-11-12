@@ -1,0 +1,22 @@
+{
+  "name": "frontendler sass core",
+  "version": "0.0.1",
+  "author": {
+    "name": "Daniel Beff",
+    "email": "daniel.beff@gmail.com",
+    "url": "http://www.danielbeff.com.br"
+  },
+  "license": "MIT",
+  "homepage": "http://frontendler.com.br/",
+  "description": "Frontendler sass core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frontendler/frontendler-sass-core"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "private": true
+}
