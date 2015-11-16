@@ -57,12 +57,6 @@
 	}
 }
 
-@mixin grid-breakpoint-custom ($min-width, $max-width) {
-	@media only screen and (min-width:$min-width) and (max-width: $max-width) {
-		@content;
-	}
-}
-
 @mixin grid-column-breakpoint($breakpoint, $column, $columns: 12, $gutter: false) {
 	@include grid-breakpoint($breakpoint) {
 		$width: 100% * $column / $columns;
@@ -77,19 +71,6 @@
 	}
 }
 
-@mixin grid-column-breakpoint-custom ($min-width, $max-width, $column, $columns: 12, $gutter: false) {
-	@include grid-breakpoint-custom ($min-width,$max-width) {
-		$width: 100% * $column / $columns;
-		width: $width;
-
-		//include gutter
-		@if $gutter != false {
-			padding-left: $gutter / 2;
-			padding-right: $gutter / 2;
-		}
-	}
-}
-
 @mixin grid-breakpoint-hide($breakpoints...) {
 	@each $breakpoint in $breakpoints {
 		@include grid-breakpoint($breakpoint) {
@@ -98,22 +79,10 @@
 	}
 }
 
-@mixin grid-breakpoint-custom-hide($min-width, $max-width) {
-	@include grid-breakpoint-custom($min-width, $max-width) {
-		display: none;
-	}
-}
-
 @mixin grid-breakpoint-show($breakpoints...) {
 	@each $breakpoint in $breakpoints {
 		@include grid-breakpoint($breakpoint) {
 			display: block;
 		}
-	}
-}
-
-@mixin grid-breakpoint-custom-show($min-width, $max-width) {
-	@include grid-breakpoint-custom($min-width, $max-width) {
-		display: block;
 	}
 }
