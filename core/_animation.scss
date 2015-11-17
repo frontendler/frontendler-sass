@@ -104,8 +104,8 @@
             }
         }
     }
-    @if index($animation-keyframes, "slide-up") != null {
-        @keyframes slide-up {
+    @if index($animation-keyframes, "slide-in-up") != null {
+        @keyframes slide-in-up {
             0% {
                 opacity: 0;
                 transform: translateY(15px);
@@ -115,8 +115,8 @@
             }
         }
     }
-    @if index($animation-keyframes, "slide-down") != null {
-        @keyframes slide-down {
+    @if index($animation-keyframes, "slide-in-down") != null {
+        @keyframes slide-in-down {
             0% {
                 opacity: 0;
                 transform: translateY(-15px);
