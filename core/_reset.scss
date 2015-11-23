@@ -1,18 +1,26 @@
 @mixin reset (){
     // --------------------------------------------------------
-    // GLOBAL
+    // GLOBAL (inheritance)
     //---------------------------------------------------------
-    html {
+
+    :root{
+        background-color: #ffffff;
+    	box-sizing: border-box;
+    	color: #000000;
+    	cursor: default;
+    	font-family: $font-family;
+        font-size: $font-size;
+    	text-rendering: optimizeLegibility;
+        text-size-adjust: 100%;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        box-sizing: border-box;
-        text-size-adjust: 100%;
-        font-family: $font-family;
-        font-size: $font-size;
     }
-    body {
+
+    *{
         margin: 0;
+        padding: 0;
     }
+
     *,
     *:before,
     *:after {
@@ -48,8 +56,6 @@
     a {
         cursor: pointer;
         text-decoration: none;
-        display: inline-block;
-        background-color: transparent;
     }
     a:active,
     a:hover {
@@ -71,8 +77,6 @@
     //---------------------------------------------------------
     ul {
         list-style: none;
-        margin:0;
-        padding:0;
     }
 
     // --------------------------------------------------------
@@ -82,16 +86,12 @@
         border-collapse: collapse;
         border-spacing: 0;
     }
-    td,
-    th {
-        padding: 0;
-    }
 
     // --------------------------------------------------------
     // FORM
     //---------------------------------------------------------
     textarea {
         overflow: auto;
+        resize: vertical;
     }
-
 }
