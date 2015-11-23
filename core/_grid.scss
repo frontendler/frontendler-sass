@@ -1,13 +1,7 @@
-@mixin grid-row($gutter: $grid-gutter-outside, $breakpoints: $grid-breakpoints) {
+@mixin grid-row() {
 	@include clearfix();
 	margin: 0 auto;
 	display: block;
-	box-sizing:border-box;
-	//include external gutter
-	@if $gutter != false{
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
 
 	//looping para incluir breakpoints
 	@each $break in map-keys($breakpoints) {
