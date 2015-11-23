@@ -4,9 +4,9 @@
 	display: block;
 
 	//looping para incluir breakpoints
-	@each $break in map-keys($breakpoints) {
+	@each $break in map-keys($grid-breakpoints) {
 		@include grid-breakpoint($break) {
-			width: nth(map-get($breakpoints,$break), 1);
+			width: nth(map-get($grid-breakpoints,$break), 1);
 		}
 	}
 }
