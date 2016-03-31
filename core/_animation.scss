@@ -144,7 +144,7 @@
     @error "$animation-keyframes not found in settings.";
 }
 @function animation-time-function($name) {
-    $ease: map-get($animation-ease,$name);
+    $ease: map-get($animation-duration,$name);
     $ease-value: nth($ease, 1);
     @return $ease-value;
 }
