@@ -1,4 +1,4 @@
-@if variable-exists(animation-keyframes) {
+@mixin animation-keyframes() {
     @if index($animation-keyframes, "fade-in") != null {
         @keyframes fade-in {
             0% {
@@ -140,11 +140,9 @@
         }
     }
 }
-@else {
-    @error "$animation-keyframes not found in settings.";
-}
+
 @function animation-time-function($name) {
-    $ease: map-get($animation-duration,$name);
+    $ease: map-get($animation-time-functions,$name);
     $ease-value: nth($ease, 1);
     @return $ease-value;
 }
