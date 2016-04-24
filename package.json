@@ -1,21 +1,21 @@
 {
-  "name": "frontendler-sass",
-  "version": "0.2.0",
-  "author": {
-    "name": "Daniel Beff",
-    "email": "daniel.beff@gmail.com",
-    "url": "http://www.danielbeff.com.br"
-  },
-  "license": "MIT",
-  "homepage": "http://frontendler.com.br/",
-  "description": "Frontendler sass library",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/frontendler/frontendler-sass"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "engines": {
-    "node": ">=0.10.0"
-  }
+    "name": "frontendler-sass",
+    "version": "0.2.0",
+    "author": {
+        "name": "Daniel Beff",
+        "email": "daniel.beff@gmail.com",
+        "url": "http://www.danielbeff.com.br"
+    },
+    "license": "MIT",
+    "homepage": "http://frontendler.com.br/",
+    "description": "Frontendler sass library",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/frontendler/frontendler-sass"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "engines": {
+        "node": ">=0.10.0"
+    }
 }

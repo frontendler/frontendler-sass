@@ -1,4 +1,4 @@
-@mixin animation-keyframes() {
+@mixin animations() {
     @if index($animation-keyframes, "fade-in") != null {
         @keyframes fade-in {
             0% {
