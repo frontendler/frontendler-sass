@@ -55,6 +55,11 @@
 	@include grid-breakpoint($breakpoint) {
 		$width: 100% * $column / $columns;
 		width: $width;
+		box-sizing:border-box;
+
+		@if $width != 100% {
+			float: left;
+		}
 
 		//include gutter
 		@if $gutter != false {

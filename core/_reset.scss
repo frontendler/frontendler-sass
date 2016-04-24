@@ -16,19 +16,16 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
-    *{
-        margin: 0;
-        padding: 0;
-    }
-
     *,
     *:before,
     *:after {
-        -webkit-font-smoothing: inherit;
-        -moz-osx-font-smoothing: inherit;
         box-sizing: inherit;
+        margin: 0;
+        padding: 0;
         color: inherit;
         font: inherit;
+        -webkit-font-smoothing: inherit;
+        -moz-osx-font-smoothing: inherit;
     }
 
     // --------------------------------------------------------
