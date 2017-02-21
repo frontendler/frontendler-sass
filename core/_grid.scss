@@ -1,7 +1,8 @@
 @mixin grid-row() {
-	@include clearfix();
-	margin: 0 auto;
-	display: block;
+	display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    margin: 0 auto;
 
 	//looping para incluir breakpoints
 	@each $break in map-keys($grid-breakpoints) {
@@ -11,15 +12,8 @@
 	}
 }
 
-@mixin grid-column($column, $columns: 12, $gutter: $grid-gutter) {
-	@include clearfix();
-	$width: 100% * $column / $columns;
-	width: $width;
-	box-sizing:border-box;
-
-	@if $width != 100% {
-		float: left;
-	}
+@mixin grid-column($flex: 1, $gutter: $grid-gutter) {
+	flex: $flex;
 
 	//include gutter
 	@if $gutter != false {
@@ -51,15 +45,9 @@
 	}
 }
 
-@mixin grid-column-breakpoint($breakpoint, $column, $columns: 12, $gutter: false) {
+@mixin grid-column-breakpoint($breakpoint, $flex: 1, $gutter: false) {
 	@include grid-breakpoint($breakpoint) {
-		$width: 100% * $column / $columns;
-		width: $width;
-		box-sizing:border-box;
-
-		@if $width != 100% {
-			float: left;
-		}
+        flex: $flex;
 
 		//include gutter
 		@if $gutter != false {
@@ -74,14 +62,6 @@
 	@each $breakpoint in $breakpoints {
 		@include grid-breakpoint($breakpoint) {
 			display: none;
-		}
-	}
-}
-
-@mixin grid-breakpoint-show($breakpoints...) {
-	@each $breakpoint in $breakpoints {
-		@include grid-breakpoint($breakpoint) {
-			display: block;
 		}
 	}
 }
