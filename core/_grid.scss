@@ -45,7 +45,7 @@
 				}
 			}
 			@else{
-				@error $breakpoint "is not a valid grid breakpoint";
+				@error $breakpoint " is not a valid grid breakpoint!";
 			}
 		}
 	}
