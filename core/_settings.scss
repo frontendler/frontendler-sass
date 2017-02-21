@@ -9,13 +9,13 @@ $font-size: 14px !default;
 //-----------------------------------------------------------
 $animation-duration: 0.25s !default;
 $animation-time-functions: (
-	"in-out-quad": cubic-bezier(0.455, 0.030, 0.515, 0.955),
+	"in-out-quad":  cubic-bezier(0.455, 0.030, 0.515, 0.955),
 	"in-out-cubic": cubic-bezier(0.645, 0.045, 0.355, 1.000),
 	"in-out-quart": cubic-bezier(0.770, 0.000, 0.175, 1.000),
 	"in-out-quint": cubic-bezier(0.860, 0.000, 0.070, 1.000),
-	"in-out-sine": cubic-bezier(0.445, 0.050, 0.550, 0.950),
-	"in-out-expo": cubic-bezier(1.000, 0.000, 0.000, 1.000),
-	"in-out-circ": cubic-bezier(0.785, 0.135, 0.150, 0.860),
+	"in-out-sine":  cubic-bezier(0.445, 0.050, 0.550, 0.950),
+	"in-out-expo":  cubic-bezier(1.000, 0.000, 0.000, 1.000),
+	"in-out-circ":  cubic-bezier(0.785, 0.135, 0.150, 0.860),
 ) !default;
 $animation-keyframes:(
 	"fade-in",
@@ -34,9 +34,9 @@ $animation-keyframes:(
 //-----------------------------------------------------------
 $grid-gutter: 40px !default;
 $grid-breakpoints:(
-	"xsmall": 100% max 600px,
-	"small":  100% min 601px max 960px,
-	"medium": 100% min 961px max 1280px,
+	"xsmall": 100%   max 600px,
+	"small":  100%   min 601px  max 960px,
+	"medium": 100%   min 961px  max 1280px,
 	"large":  1280px min 1281px max 1600px,
     "xlarge": 1600px min 1601px
 )!default;
