@@ -1,0 +1,21 @@
+@function font-size($size-name) {
+    $size: map-get($font-sizes,$size-name);
+    $font-size: nth($size, 1);
+    @if ($size == null) {
+        @error "'#{$size-name}' doesn't exist in $font-sizes settings";
+        @return null;
+    } @else {
+       @return $font-size;
+    }
+}
+
+@function font-weight($weight-name) {
+    $weight: map-get($font-weights,$weight-name);
+    $font-weight: nth($weight, 1);
+    @if ($weight == null) {
+        @error "'#{$weight-name}' doesn't exist in $font-weights settings";
+        @return null;
+    } @else {
+       @return $font-weight;
+    }
+}

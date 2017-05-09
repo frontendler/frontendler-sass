@@ -3,6 +3,20 @@
 //-----------------------------------------------------------
 $font-family: "Open Sans", "Helvetica", sans-serif !default;
 $font-size: 14px !default;
+$font-sizes:(
+  "xsmall": (11px / $font-size) * 1em,
+  "small": (12px / $font-size) * 1em,
+  "medium": (14px / $font-size) * 1em,
+  "large": (16px / $font-size) * 1em,
+  "xlarge": (24px / $font-size) * 1em,
+  "xxlarge": (32px / $font-size) * 1em
+)!default;
+
+$font-weights:(
+  "light" : lighter,
+  "regular" : normal,
+  "bold" : bold
+)!default;
 
 //-----------------------------------------------------------
 //ANIMATION
