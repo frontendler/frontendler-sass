@@ -1,3 +1,15 @@
+@function grid-space($space-name) {
+    $space-key: map-get($grid-spaces,$space-name);
+
+    @if ($space-key == null) {
+        @error "'#{$space-name}' doesn't exist in $grid-spaces settings";
+        @return null;
+    }
+
+    $space-value: nth($space-key, 1);
+    @return $space-value;
+}
+
 @mixin grid-row() {
 	display: flex;
     align-items: stretch;
