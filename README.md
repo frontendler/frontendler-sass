@@ -17,7 +17,42 @@ This library is browser prefixes free so if you want to use this package in your
 **grid-gutter `var`**
 
 ```scss
-$grid-gutter: 40px !default;
+$grid-gutter: (40px / $font-size) * 1em !default;
+```
+
+
+**grid-spaces `var`**
+
+This space list have the objective to keep the proportionality of the grid in all the spaces between all elements with the goal to get groups of content based on the proportional proximity respecting the responsive aspects.
+
+> The Gestalt law of proximity states that "objects or shapes that are close to one another appear to form groups". <https://en.wikipedia.org/wiki/Principles_of_grouping#Proximity>
+
+In the link below you can get a very well done explanation about space scales.
+
+<https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62>
+
+
+With Frontendler you can define you own list of spaces as you can do in grid-breakpoints, colors, font-sizes, etc..
+However the default value of the space list, based in geometric progression, is:
+
+```scss
+$grid-spaces:(
+    "xxsmall": $grid-gutter/8,
+    "xsmall":  $grid-gutter/4,
+    "small":   $grid-gutter/2,
+    "medium":  $grid-gutter,
+    "large":   $grid-gutter*2,
+    "xlarge":  $grid-gutter*4,
+    "xxlarge"  $grid-gutter*8
+)!default;
+```
+
+**grid-space `function`**
+
+```scss
+.class {
+    padding: grid-space($grid-space-name);
+}
 ```
 
 **grid-breakpoints `var`**
@@ -72,11 +107,12 @@ $grid-breakpoints:(
 @include grid-breakpoint-hide ($breakpoints...);
 ```
 
----
+--------------------------------------------------------------------------------
 
 ### Font
 
 **font-family `var`**
+
 ```scss
 $font-family: "Open Sans", "Helvetica", sans-serif !default;
 ```
@@ -122,7 +158,7 @@ $font-weights:(
 @function font-weight($weight-name)
 ```
 
----
+--------------------------------------------------------------------------------
 
 ### Colors
 
@@ -147,10 +183,12 @@ $colors:(
 **color `function`**
 
 ```scss
-@function color($color-name,$amount:50%)
+.class {
+    color: color($color-name,$amount:50%);
+}
 ```
 
----
+--------------------------------------------------------------------------------
 
 ### Animations
 
@@ -196,7 +234,7 @@ $animation-keyframes:(
 ) !default;
 ```
 
----
+--------------------------------------------------------------------------------
 
 ### Utils
 
@@ -216,6 +254,6 @@ Based in this awesome [freebie](https://medium.com/@Florian/freebie-google-mater
 @include box-shadow ($level);
 ```
 
----
+--------------------------------------------------------------------------------
 
 Made with ♥ by [Daniel Beff](http://www.danielbeff.com.br/) ([@dbeff](https://github.com/dbeff))
