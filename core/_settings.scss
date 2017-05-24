@@ -46,7 +46,16 @@ $animation-keyframes:(
 //-----------------------------------------------------------
 //GRID
 //-----------------------------------------------------------
-$grid-gutter: 40px !default;
+$grid-gutter: (40px / $font-size) * 1em !default;
+$grid-spaces:(
+    "xxsmall": $grid-gutter / 8,
+    "xsmall":  $grid-gutter / 4,
+    "small":   $grid-gutter / 2,
+    "medium":  $grid-gutter,
+    "large":   $grid-gutter * 2,
+    "xlarge":  $grid-gutter * 4,
+    "xxlarge":  $grid-gutter * 8
+)!default;
 $grid-breakpoints:(
 	"xsmall": 100%   max 600px,
 	"small":  100%   min 601px  max 960px,
