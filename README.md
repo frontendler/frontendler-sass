@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/frontendler-sass.svg)](https://badge.fury.io/js/frontendler-sass)
 
-This package contains all scss files used in [frontendler](http://frontendler.com.br) project.
+This package contains all scss files used in [frontendler](http://frontendler.io) project.
 
 ## Dependencies
 
