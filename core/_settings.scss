@@ -1,82 +1,82 @@
-//-----------------------------------------------------------
-//FONT
-//-----------------------------------------------------------
-$font-family: "Open Sans", "Helvetica", sans-serif !default;
-$font-size: 14px !default;
-$font-sizes:(
-  "xsmall": (11px / $font-size) * 1em,
-  "small": (12px / $font-size) * 1em,
-  "medium": (14px / $font-size) * 1em,
-  "large": (16px / $font-size) * 1em,
-  "xlarge": (24px / $font-size) * 1em,
-  "xxlarge": (32px / $font-size) * 1em
-)!default;
+// ---------------------------------------------------------
+// FONT
+// ---------------------------------------------------------
 
-$font-weights:(
-  "light" : lighter,
-  "regular" : normal,
-  "bold" : bold
-)!default;
+$minor-second: 1.067 !default;
+$major-second: 1.125 !default;
+$minor-third: 1.2 !default;
+$major-third: 1.25 !default;
+$perfect-fourth: 1.333 !default;
+$augmented-fourth: 1.414 !default;
+$perfect-fifth: 1.5 !default;
+$golden-ratio: 1.618 !default;
 
-//-----------------------------------------------------------
-//ANIMATION
-//-----------------------------------------------------------
+$font-family-base: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+    Roboto !default;
+$font-family-mono: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
+    monospace !default;
+$font-family-fallback: "Helvetica Neue", sans-serif !default;
+$font-family: $font-family-base, $font-family-fallback !default;
+
+$font-size: 16px !default;
+$font-sizes: font-sizes($major-third) !default;
+$font-weights: ("light" : lighter, "regular" : normal, "bold" : bold) !default;
+
+// ---------------------------------------------------------
+// ANIMATION
+// ---------------------------------------------------------
+
 $animation-duration: 0.25s !default;
 $animation-time-functions: (
-	"in-out-quad":  cubic-bezier(0.455, 0.030, 0.515, 0.955),
-	"in-out-cubic": cubic-bezier(0.645, 0.045, 0.355, 1.000),
-	"in-out-quart": cubic-bezier(0.770, 0.000, 0.175, 1.000),
-	"in-out-quint": cubic-bezier(0.860, 0.000, 0.070, 1.000),
-	"in-out-sine":  cubic-bezier(0.445, 0.050, 0.550, 0.950),
-	"in-out-expo":  cubic-bezier(1.000, 0.000, 0.000, 1.000),
-	"in-out-circ":  cubic-bezier(0.785, 0.135, 0.150, 0.860),
-) !default;
-$animation-keyframes:(
-	"fade-in",
-	"fade-out",
-	"bounce-in-down",
-	"bounce-in-up",
-	"rubber-band",
-	"zoom-in",
-	"slide-in-up",
-	"slide-in-down",
-	"alert"
-) !default;
+        "in-out-quad": cubic-bezier(0.455, 0.03, 0.515, 0.955),
+        "in-out-cubic": cubic-bezier(0.645, 0.045, 0.355, 1),
+        "in-out-quart": cubic-bezier(0.77, 0, 0.175, 1),
+        "in-out-quint": cubic-bezier(0.86, 0, 0.07, 1),
+        "in-out-sine": cubic-bezier(0.445, 0.05, 0.55, 0.95),
+        "in-out-expo": cubic-bezier(1, 0, 0, 1),
+        "in-out-circ": cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    )!default;
+$animation-keyframes: (
+        "fade-in",
+        "fade-out",
+        "bounce-in-down",
+        "bounce-in-up",
+        "rubber-band",
+        "zoom-in",
+        "slide-in-up",
+        "slide-in-down",
+        "alert"
+    )!default;
 
-//-----------------------------------------------------------
-//GRID
-//-----------------------------------------------------------
-$grid-gutter: (40px / $font-size) * 1em !default;
-$grid-spaces:(
-    "xxsmall": $grid-gutter / 8,
-    "xsmall":  $grid-gutter / 4,
-    "small":   $grid-gutter / 2,
-    "medium":  $grid-gutter,
-    "large":   $grid-gutter * 2,
-    "xlarge":  $grid-gutter * 4,
-    "xxlarge":  $grid-gutter * 8
-)!default;
-$grid-breakpoints:(
-	"xsmall": 100%   max 600px,
-	"small":  100%   min 601px  max 960px,
-	"medium": 100%   min 961px  max 1280px,
-	"large":  1280px min 1281px max 1600px,
-    "xlarge": 1600px min 1601px
-)!default;
+// ---------------------------------------------------------
+// GRID
+// ---------------------------------------------------------
 
-//-----------------------------------------------------------
-//COLOR
-//-----------------------------------------------------------
-$colors:(
-	"ocean":   #00a7ca,
-	"blue":    #0075d3,
-	"purple":  #8244a7,
-	"pink":    #dd318a,
-	"green":   #71be48,
-	"yellow":  #f59d37,
-	"orange":  #f75925,
-	"red":     #dd202b,
-	"dark":    #1c2731,
-	"gray":    #606c78,
-	"silver":  #939fac
-) !default;
+$grid-gutter: 2em !default;
+$grid-spaces: grid-spaces($grid-gutter, 2) !default;
+
+$grid-breakpoints: (
+        "xsmall": 100% max 599px,
+        "small": 100% min 600px max 959px,
+        "medium": 100% min 960px max 1279px,
+        "large": 100% min 1280px max 1439px,
+        "xlarge": 1440px min 1439px
+    )!default;
+
+// ---------------------------------------------------------
+// COLOR
+// ---------------------------------------------------------
+
+$colors: (
+        "ocean": #00a7ca,
+        "blue": #0075d3,
+        "purple": #8244a7,
+        "pink": #dd318a,
+        "green": #71be48,
+        "yellow": #f59d37,
+        "orange": #f75925,
+        "red": #dd202b,
+        "dark": #1c2731,
+        "gray": #606c78,
+        "silver": #939fac
+    )!default;

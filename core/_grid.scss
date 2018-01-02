@@ -1,8 +1,8 @@
 @function grid-space($space-name) {
-    $space-key: map-get($grid-spaces,$space-name);
+    $space-key: map-get($grid-spaces, $space-name);
 
     @if ($space-key == null) {
-        @error "'#{$space-name}' doesn't exist in $grid-spaces settings";
+        @error "\"#{$space-name}\" doesn't exist in $grid-spaces settings";
         @return null;
     }
 
@@ -11,69 +11,67 @@
 }
 
 @mixin grid-row() {
-	display: flex;
+    display: flex;
     align-items: stretch;
     flex-flow: row wrap;
     margin: 0 auto;
 
-	//looping para incluir breakpoints
-	@each $break in map-keys($grid-breakpoints) {
-		@include grid-breakpoint($break) {
-			width: nth(map-get($grid-breakpoints,$break), 1);
-		}
-	}
+    //looping para incluir breakpoints
+    @each $break in map-keys($grid-breakpoints) {
+        @include grid-breakpoint($break) {
+            width: nth(map-get($grid-breakpoints, $break), 1);
+        }
+    }
 }
 
 @mixin grid-column($flex: 1, $gutter: $grid-gutter) {
-	flex: $flex;
+    flex: $flex;
 
-	//include gutter
-	@if $gutter != false {
-		padding-left: $gutter / 2;
-		padding-right: $gutter / 2;
-	}
+    //include gutter
+    @if $gutter != false {
+        padding-left: $gutter / 2;
+        padding-right: $gutter / 2;
+    }
 }
 
 @mixin grid-breakpoint($breakpoints...) {
-	@if ($grid-breakpoints != false) {
-		@each $breakpoint in $breakpoints {
-			@if (map-get($grid-breakpoints,$breakpoint) != null) {
-				$break:map-get($grid-breakpoints,$breakpoint);
-				@if (length($break) > 3) {
-					@media only screen and (#{nth($break, 2)}-width: nth($break, 3)) and (#{nth($break, 4)}-width: nth($break, 5)) {
-						@content;
-					}
-				}
-				@else{
-					@media only screen and (#{nth($break, 2)}-width: nth($break, 3)) {
-						@content;
-					}
-				}
-			}
-			@else{
-				@error $breakpoint " is not a valid grid breakpoint!";
-			}
-		}
-	}
+    @if ($grid-breakpoints != false) {
+        @each $breakpoint in $breakpoints {
+            @if (map-get($grid-breakpoints,$breakpoint) != null) {
+                $break: map-get($grid-breakpoints, $breakpoint);
+                @if (length($break) > 3) {
+                    @media only screen and (#{nth($break, 2)}-width: nth($break, 3)) and (#{nth($break, 4)}-width: nth($break, 5)) {
+                        @content;
+                    }
+                } @else {
+                    @media only screen and (#{nth($break, 2)}-width: nth($break, 3)) {
+                        @content;
+                    }
+                }
+            } @else {
+                @error $breakpoint " is not a valid grid breakpoint!";
+            }
+        }
+    }
 }
 
 @mixin grid-column-breakpoint($breakpoint, $flex: 1, $gutter: false) {
-	@include grid-breakpoint($breakpoint) {
+    @include grid-breakpoint($breakpoint) {
         flex: $flex;
 
-		//include gutter
-		@if $gutter != false {
-			padding-left: $gutter / 2;
-			padding-right: $gutter / 2;
-		}
-		@content;
-	}
+        //include gutter
+        @if $gutter != false {
+            padding-left: $gutter / 2;
+            padding-right: $gutter / 2;
+        }
+        @content;
+    }
 }
 
 @mixin grid-breakpoint-hide($breakpoints...) {
-	@each $breakpoint in $breakpoints {
-		@include grid-breakpoint($breakpoint) {
-			display: none;
-		}
-	}
+    @each $breakpoint in $breakpoints {
+        @include grid-breakpoint($breakpoint) {
+            display: none;
+        }
+    }
 }
