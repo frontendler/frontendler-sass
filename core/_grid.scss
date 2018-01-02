@@ -2,7 +2,7 @@
     $space-key: map-get($grid-spaces, $space-name);
 
     @if ($space-key == null) {
-        @error "\"#{$space-name}\" doesn't exist in $grid-spaces settings";
+        @error "'#{$space-name}' doesn't exist in $grid-spaces settings";
         @return null;
     }
 
