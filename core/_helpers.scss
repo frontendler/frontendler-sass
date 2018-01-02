@@ -12,13 +12,15 @@
 
 @function font-sizes($scale-factor) {
     $list: (
+        "xxxlarge": 1em / pow($scale-factor, 4)
         "xxsmall": 1em / pow($scale-factor, 3),
         "xsmall": 1em / pow($scale-factor, 2),
         "small": 1em / pow($scale-factor, 1),
         "medium": 1em,
         "large": 1em * pow($scale-factor, 1),
         "xlarge": 1em * pow($scale-factor, 2),
-        "xxlarge": 1em * pow($scale-factor, 3)
+        "xxlarge": 1em * pow($scale-factor, 3),
+        "xxxlarge": 1em * pow($scale-factor, 4)
     );
 
     @return $list;
@@ -26,13 +28,15 @@
 
 @function grid-spaces($grid-gutter,$scale-factor) {
     $list: (
+        "xxxsmall": $grid-gutter / pow($scale-factor, 4),
         "xxsmall": $grid-gutter / pow($scale-factor, 3),
         "xsmall": $grid-gutter / pow($scale-factor, 2),
         "small": $grid-gutter / pow($scale-factor, 1),
         "medium": $grid-gutter,
         "large": $grid-gutter * pow($scale-factor, 1),
         "xlarge": $grid-gutter * pow($scale-factor, 2),
-        "xxlarge": $grid-gutter * pow($scale-factor, 3)
+        "xxlarge": $grid-gutter * pow($scale-factor, 3),
+        "xxxlarge": $grid-gutter * pow($scale-factor, 4)
     );
 
     @return $list;
