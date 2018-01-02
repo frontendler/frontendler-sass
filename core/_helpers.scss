@@ -12,7 +12,7 @@
 
 @function font-sizes($scale-factor) {
     $list: (
-        "xxxlarge": 1em / pow($scale-factor, 4)
+        "xxxlarge": 1em / pow($scale-factor, 4),
         "xxsmall": 1em / pow($scale-factor, 3),
         "xsmall": 1em / pow($scale-factor, 2),
         "small": 1em / pow($scale-factor, 1),
