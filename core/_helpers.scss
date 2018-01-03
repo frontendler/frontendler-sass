@@ -1,43 +1,43 @@
 @function pow($number, $exponent) {
-    $value: 1;
+  $value: 1;
 
-    @if $exponent > 0 {
-        @for $i from 1 through $exponent {
-            $value: $value * $number;
-        }
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
     }
+  }
 
-    @return $value;
+  @return $value;
 }
 
 @function font-sizes($scale-factor) {
-    $list: (
-        "xxxsmall": 1em / pow($scale-factor, 4),
-        "xxsmall": 1em / pow($scale-factor, 3),
-        "xsmall": 1em / pow($scale-factor, 2),
-        "small": 1em / pow($scale-factor, 1),
-        "medium": 1em,
-        "large": 1em * pow($scale-factor, 1),
-        "xlarge": 1em * pow($scale-factor, 2),
-        "xxlarge": 1em * pow($scale-factor, 3),
-        "xxxlarge": 1em * pow($scale-factor, 4)
-    );
+  $list: (
+    "xxxsmall": 1em / pow($scale-factor, 4),
+    "xxsmall": 1em / pow($scale-factor, 3),
+    "xsmall": 1em / pow($scale-factor, 2),
+    "small": 1em / pow($scale-factor, 1),
+    "medium": 1em,
+    "large": 1em * pow($scale-factor, 1),
+    "xlarge": 1em * pow($scale-factor, 2),
+    "xxlarge": 1em * pow($scale-factor, 3),
+    "xxxlarge": 1em * pow($scale-factor, 4)
+  );
 
-    @return $list;
+  @return $list;
 }
 
 @function grid-spaces($grid-gutter,$scale-factor) {
-    $list: (
-        "xxxsmall": $grid-gutter / pow($scale-factor, 4),
-        "xxsmall": $grid-gutter / pow($scale-factor, 3),
-        "xsmall": $grid-gutter / pow($scale-factor, 2),
-        "small": $grid-gutter / pow($scale-factor, 1),
-        "medium": $grid-gutter,
-        "large": $grid-gutter * pow($scale-factor, 1),
-        "xlarge": $grid-gutter * pow($scale-factor, 2),
-        "xxlarge": $grid-gutter * pow($scale-factor, 3),
-        "xxxlarge": $grid-gutter * pow($scale-factor, 4)
-    );
+  $list: (
+    "xxxsmall": $grid-gutter / pow($scale-factor, 4),
+    "xxsmall": $grid-gutter / pow($scale-factor, 3),
+    "xsmall": $grid-gutter / pow($scale-factor, 2),
+    "small": $grid-gutter / pow($scale-factor, 1),
+    "medium": $grid-gutter,
+    "large": $grid-gutter * pow($scale-factor, 1),
+    "xlarge": $grid-gutter * pow($scale-factor, 2),
+    "xxlarge": $grid-gutter * pow($scale-factor, 3),
+    "xxxlarge": $grid-gutter * pow($scale-factor, 4)
+  );
 
-    @return $list;
+  @return $list;
 }

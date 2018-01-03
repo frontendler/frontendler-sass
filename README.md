@@ -57,7 +57,7 @@ grid-spaces($grid-gutter, $scale-factor)
 
 ```scss
 .class {
-    padding: grid-space($grid-space-name);
+  padding: grid-space($grid-space-name);
 }
 ```
 
@@ -65,12 +65,12 @@ grid-spaces($grid-gutter, $scale-factor)
 
 ```scss
 $grid-breakpoints: (
-        "xsmall": 100% max 600px,
-        "small": 100% min 601px max 960px,
-        "medium": 100% min 961px max 1280px,
-        "large": 1280px min 1281px max 1600px,
-        "xlarge": 1600px min 1601px
-    )!default;
+    "xsmall": 100% max 600px,
+    "small": 100% min 601px max 960px,
+    "medium": 100% min 961px max 1280px,
+    "large": 1280px min 1281px max 1600px,
+    "xlarge": 1600px min 1601px
+  )!default;
 ```
 
 **grid-row `mixin`**
@@ -121,14 +121,14 @@ $grid-breakpoints: (
 
 ```scss
 $font-family-base: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
-    Roboto !default;
+  Roboto !default;
 ```
 
 **font-family-mono `var`**
 
 ```scss
 $font-family-mono: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier,
-    monospace !default;
+  monospace !default;
 ```
 
 **font-family-fallback `var`**
@@ -155,9 +155,9 @@ Simple example:
 
 ```scss
 $font-sizes: (
-    "small": 0.8em,
-    "medium": 1em,
-    "large": 2em
+  "small": 0.8em,
+  "medium": 1em,
+  "large": 2em
 );
 ```
 
@@ -216,26 +216,26 @@ $font-weights: ("light" : lighter, "regular" : normal, "bold" : bold)!default;
 
 ```scss
 $colors: (
-        "ocean": #00a7ca,
-        "blue": #0075d3,
-        "purple": #8244a7,
-        "pink": #dd318a,
-        "green": #71be48,
-        "yellow": #f59d37,
-        "orange": #f75925,
-        "red": #dd202b,
-        "dark": #1c2731,
-        "gray": #606c78,
-        "silver": #939fac
-    )
-    !default;
+    "ocean": #00a7ca,
+    "blue": #0075d3,
+    "purple": #8244a7,
+    "pink": #dd318a,
+    "green": #71be48,
+    "yellow": #f59d37,
+    "orange": #f75925,
+    "red": #dd202b,
+    "dark": #1c2731,
+    "gray": #606c78,
+    "silver": #939fac
+  )
+  !default;
 ```
 
 **color `function`**
 
 ```scss
 .class {
-    color: color($color-name, $amount:50%);
+  color: color($color-name, $amount:50%);
 }
 ```
 
@@ -259,32 +259,32 @@ $animation-duration: 0.25s !default;
 
 ```scss
 $animation-time-functions: (
-        "in-out-quad": cubic-bezier(0.455, 0.03, 0.515, 0.955),
-        "in-out-cubic": cubic-bezier(0.645, 0.045, 0.355, 1),
-        "in-out-quart": cubic-bezier(0.77, 0, 0.175, 1),
-        "in-out-quint": cubic-bezier(0.86, 0, 0.07, 1),
-        "in-out-sine": cubic-bezier(0.445, 0.05, 0.55, 0.95),
-        "in-out-expo": cubic-bezier(1, 0, 0, 1),
-        "in-out-circ": cubic-bezier(0.785, 0.135, 0.15, 0.86)
-    )
-    !default;
+    "in-out-quad": cubic-bezier(0.455, 0.03, 0.515, 0.955),
+    "in-out-cubic": cubic-bezier(0.645, 0.045, 0.355, 1),
+    "in-out-quart": cubic-bezier(0.77, 0, 0.175, 1),
+    "in-out-quint": cubic-bezier(0.86, 0, 0.07, 1),
+    "in-out-sine": cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    "in-out-expo": cubic-bezier(1, 0, 0, 1),
+    "in-out-circ": cubic-bezier(0.785, 0.135, 0.15, 0.86)
+  )
+  !default;
 ```
 
 **animation-keyframes `var`**
 
 ```scss
 $animation-keyframes: (
-        "fade-in",
-        "fade-out",
-        "bounce-in-down",
-        "bounce-in-up",
-        "rubber-band",
-        "zoom-in",
-        "slide-in-up",
-        "slide-in-down",
-        "alert"
-    )
-    !default;
+    "fade-in",
+    "fade-out",
+    "bounce-in-down",
+    "bounce-in-up",
+    "rubber-band",
+    "zoom-in",
+    "slide-in-up",
+    "slide-in-down",
+    "alert"
+  )
+  !default;
 ```
 
 ---
